@@ -1,0 +1,121 @@
+.pharmacy-page {
+    padding: var(--spacing-xl) 0;
+    min-height: calc(100vh - 140px);
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.medicines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.medicine-card {
+    background: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.medicine-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.medicine-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.medicine-header h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+.medicine-generic {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.medicine-info {
+    background: var(--bg-primary);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+}
+
+.medicine-info p {
+    margin: var(--spacing-xs) 0;
+    color: var(--text-secondary);
+}
+
+.medicine-description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.medicine-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border);
+}
+
+.medicine-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.medicine-stock {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .medicines-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

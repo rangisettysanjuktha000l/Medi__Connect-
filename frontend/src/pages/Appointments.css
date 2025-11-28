@@ -1,0 +1,93 @@
+.appointments-page {
+    padding: var(--spacing-xl) 0;
+    min-height: calc(100vh - 140px);
+}
+
+.appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.appointment-card {
+    background: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    border-left: 4px solid var(--primary);
+}
+
+.appointment-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.appointment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--border);
+}
+
+.appointment-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.appointment-spec {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.appointment-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+}
+
+.detail-icon {
+    font-size: 1.25rem;
+}
+
+.appointment-symptoms,
+.appointment-diagnosis,
+.appointment-prescription {
+    background: var(--bg-primary);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    margin-top: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.appointment-diagnosis {
+    background: rgba(0, 201, 167, 0.1);
+    border-left: 3px solid var(--secondary);
+}
+
+.appointment-prescription {
+    background: rgba(0, 102, 255, 0.1);
+    border-left: 3px solid var(--primary);
+}
+
+@media (max-width: 768px) {
+    .appointment-header {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .appointment-details {
+        grid-template-columns: 1fr;
+    }
+}
